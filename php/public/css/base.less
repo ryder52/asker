@@ -1,0 +1,165 @@
+@import "_variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: @white;
+  display: grid;
+  grid-auto-rows: auto 1fr;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2%;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    .block {
+      padding: 1rem 0;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      &--half {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        div {
+          width: 45%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+        }
+      }
+
+      .page {
+        margin-top: 1rem;
+        padding: 2rem;
+        width: 80%;
+      }
+
+      .page, form {
+        margin: auto;
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      }
+
+      form {
+        padding: 2rem;
+        width: 40%;
+      }
+
+      button, .button {
+        text-decoration: none;
+        width: 100%;
+        background-color: @primary;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 0.6rem;
+        cursor: pointer;
+        font-style: normal;
+        &:hover {
+          box-shadow: inset 0 0 3px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.24);
+          background-color: darken(@primary, 2%);
+        }
+      }
+
+      .input {
+        position: relative;
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        label {
+          position: absolute;
+          top: 0;
+          left: 7px;
+          font-size: 9px;
+          font-weight: bold;
+          background-color: white;
+          padding: 3px;
+          height: 15px;
+        }
+        input, textarea {
+          width: 100%;
+          background-color: white;
+          padding: 0.6rem;
+          border: 1px solid @primary;
+          border-radius: 3px;
+          &.error {
+            border: 1px solid red;
+          }
+        }
+        textarea {
+          min-height: 3rem;
+        }
+      }
+    }
+  }
+}
+
+
+.link {
+  text-decoration: none;
+}
+
+.header {
+  height: 60px;
+  background-color: @primary;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  
+  &__left, &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    font-weight: bold;
+    color: white;
+  }
+
+  &__right &__button {
+    padding-left: 0.5rem;
+  }
+}
+
+.alert {
+  padding: 0.5rem;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+  &.warning {
+    background-color: red;
+  }
+  &.success {
+    background-color: green;
+  }
+}
+
+.hidden {
+  display: none !important;
+}

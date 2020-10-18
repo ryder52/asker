@@ -1,0 +1,16 @@
+{
+    "name": "mikolas/asker",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "dusan.mikolas",
+            "email": "dusan.mikolas@gmail.com"
+        }
+    ],
+    "require": {}
+}

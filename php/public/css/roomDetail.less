@@ -1,0 +1,55 @@
+@import "_variables";
+
+.questions {
+  border: 1px solid @primary;
+  border-radius: 3px;
+  padding: 0 1rem;
+
+  .question {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-bottom: 1px solid @primary;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &__head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #555;
+
+      &--right {
+        display: flex;
+      }
+
+      button {
+      }
+    }
+    &__dislikes {
+      padding-left: 0.5rem;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      &--question {
+        text-align: left;
+      }
+      &--answer {
+        text-align: right;
+        font-style: italic;
+        color: darkcyan;
+        .empty {
+          font-size: 13px;
+          color: darkgrey;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}

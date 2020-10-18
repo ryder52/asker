@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #eee;
+  display: grid;
+  grid-auto-rows: auto 1fr;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2%;
+}
+.container .content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.container .content .block {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.container .content .block--half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .content .block--half div {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.container .content .block .page {
+  margin-top: 1rem;
+  padding: 2rem;
+  width: 80%;
+}
+.container .content .block .page,
+.container .content .block form {
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.container .content .block form {
+  padding: 2rem;
+  width: 40%;
+}
+.container .content .block button,
+.container .content .block .button {
+  text-decoration: none;
+  width: 100%;
+  background-color: #d48e15;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-style: normal;
+}
+.container .content .block button:hover,
+.container .content .block .button:hover {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.24);
+  background-color: #cb8814;
+}
+.container .content .block .input {
+  position: relative;
+  padding: 0.5rem 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.container .content .block .input label {
+  position: absolute;
+  top: 0;
+  left: 7px;
+  font-size: 9px;
+  font-weight: bold;
+  background-color: white;
+  padding: 3px;
+  height: 15px;
+}
+.container .content .block .input input,
+.container .content .block .input textarea {
+  width: 100%;
+  background-color: white;
+  padding: 0.6rem;
+  border: 1px solid #d48e15;
+  border-radius: 3px;
+}
+.container .content .block .input input.error,
+.container .content .block .input textarea.error {
+  border: 1px solid red;
+}
+.container .content .block .input textarea {
+  min-height: 3rem;
+}
+.link {
+  text-decoration: none;
+}
+.header {
+  height: 60px;
+  background-color: #d48e15;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__button {
+  font-weight: bold;
+  color: white;
+}
+.header__right .header__button {
+  padding-left: 0.5rem;
+}
+.alert {
+  padding: 0.5rem;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+.alert.warning {
+  background-color: red;
+}
+.alert.success {
+  background-color: green;
+}
+.hidden {
+  display: none !important;
+}
+/*# sourceMappingURL=base.css.map */

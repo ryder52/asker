@@ -52,7 +52,18 @@ body {
       .page {
         margin-top: 1rem;
         padding: 2rem;
-        width: 80%;
+        width: 50%;
+        @media screen and (max-width: @laptop) {
+          width: 70%;
+        }
+        @media screen and (max-width: @tablet) {
+          width: 80%;
+        }
+        @media screen and (max-width: @mobile) {
+          width: 99%;
+          padding: 0.5rem;
+          margin-top: 0.5rem;
+        }
       }
 
       .page, form {
@@ -65,7 +76,16 @@ body {
 
       form {
         padding: 2rem;
-        width: 40%;
+        width: 30%;
+        @media screen and (max-width: @laptop) {
+          width: 40%;
+        }
+        @media screen and (max-width: @tablet) {
+          width: 70%;
+        }
+        @media screen and (max-width: @mobile) {
+          width: 90%;
+        }
       }
 
       button, .button {

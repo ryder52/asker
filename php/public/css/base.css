@@ -47,7 +47,24 @@ body {
 .container .content .block .page {
   margin-top: 1rem;
   padding: 2rem;
-  width: 80%;
+  width: 50%;
+}
+@media screen and (max-width: 1224px) {
+  .container .content .block .page {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .content .block .page {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .container .content .block .page {
+    width: 99%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
 }
 .container .content .block .page,
 .container .content .block form {
@@ -59,7 +76,22 @@ body {
 }
 .container .content .block form {
   padding: 2rem;
-  width: 40%;
+  width: 30%;
+}
+@media screen and (max-width: 1224px) {
+  .container .content .block form {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .content .block form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .container .content .block form {
+    width: 90%;
+  }
 }
 .container .content .block button,
 .container .content .block .button {

@@ -12,7 +12,7 @@
 
                 <button id="connect" type="button" class="form_button">Connect</button>
             </div>
-            <?php if (\App\Service\AppService::isLogged()): ?>
+            <?php if (\App\Service\AppService::isLogged()) : ?>
                 <div>
                     <div class="input">
                         <label for="name">Name</label>
@@ -21,16 +21,16 @@
 
                     <button id="create" type="button" class="form_button">Create</button>
                 </div>
-            <?php else: ?>
+            <?php else : ?>
                 <div>
                     Login/Register to create new room
                 </div>
             <?php endif; ?>
         </div>
-        <?php if (isset($rooms) && !empty($rooms)): ?>
+        <?php if (isset($rooms) && !empty($rooms)) : ?>
             <h2>Your rooms</h2>
             <div class="block">
-                <?php foreach ($rooms as $room): ?>
+                <?php foreach ($rooms as $room) : ?>
                     <div class="room">
                         <a href="<?= \App\Service\AppService::getRoute('roomDetail', ['room' => $room['id']]) ?>" class="link">
                             <?= $room['name'] ?>
@@ -38,8 +38,8 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-        <?php else: ?>
-            <h2>You didn't created any rooms yet</h2>
+        <?php else : ?>
+            <h2>You didn't create any rooms yet</h2>
         <?php endif; ?>
     </div>
 </div>

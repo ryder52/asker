@@ -14,7 +14,7 @@ class App
         $requestMethod = $_SERVER['REQUEST_METHOD'];
         $requestRoute = $_SERVER['REQUEST_URI'];
 
-        foreach($routes as $key => $options) {
+        foreach ($routes as $key => $options) {
             $pattern = "@^" . preg_replace('/\\\:[a-zA-Z0-9\_\-]+/', '([a-zA-Z0-9\-\_]+)', preg_quote($options['url'])) . "$@D";
             $matches = [];
             if ($requestMethod === $options['method'] && preg_match($pattern, $requestRoute, $matches)) {

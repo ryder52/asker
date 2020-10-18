@@ -5,7 +5,8 @@ namespace App;
 use App\Service\ConfigService;
 use PDO;
 
-class Database {
+class Database
+{
 
     private static ?Database $instance = null;
     private PDO $connection;
@@ -22,8 +23,7 @@ class Database {
 
     public static function getInstance()
     {
-        if(!self::$instance)
-        {
+        if (!self::$instance) {
             self::$instance = new Database();
         }
 
